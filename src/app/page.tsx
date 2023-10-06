@@ -16,7 +16,7 @@ export default function Home() {
         >
           <div className="text-3xl">
             <p className="my-4">Hello, I’m Ken.</p>
-            <p className="my-4">I am a front-end web developer located in San Francisco, CA.</p>
+            <p className="my-4">I am a front-end engineer located in San Francisco, CA.</p>
           </div>
         </InnerContentTemplate>
       </>
