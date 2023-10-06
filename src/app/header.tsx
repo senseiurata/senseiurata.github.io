@@ -35,36 +35,27 @@ export default function Header () {
       <div className="flex-auto flex justify-end" ref={menuRef}>
         <nav className={`absolute right-3 top-10 bg-gray-950 ${menuOpen ? 'block' : 'hidden'} md:block md:static md:bg-transparent`}> 
           <ul className="flex flex-col justify-end md:flex-row">
-            <li>
-              <Link
-                className={`px-6 py-4 inline-block text-white`}
-                href="/profile"
-                aria-current={ pathname === '/profile' ? 'page' : undefined }
-              >
-                Profile
-              </Link>
-            </li>
-            <li>
-              <Link
-                className={`px-6 py-4 inline-block text-white`}
-                href="/portfolio"
-                aria-current={ pathname === '/portfolio' ? 'page' : undefined }
-              >
-                Portfolio
-              </Link>
-            </li>
-            <li>
-              <Link
-                className={`px-6 py-4 inline-block text-white`}
-                href="/contact"
-                aria-current={ pathname === '/contact' ? 'page' : undefined }
-              >
-                Contact
-              </Link>
-            </li>
+            {
+              [
+                { text: 'Profile', url: '/profile'},
+                { text: 'Portfolio', url: '/portfolio'},
+                { text: 'Contact', url: '/contact'},
+              ].map(({ text, url }: { text: string, url: string }, index: number) => {
+                return (
+                  <li key={index}>
+                    <Link
+                      href={url}
+                      className={`px-6 py-4 inline-block text-white ${pathname === url ? 'md:text-cyan-300' : ''}`}
+                      aria-current={ pathname === url ? 'page' : undefined }
+                    >
+                      {text}
+                    </Link>
+                  </li>
+                );
+              })
+            }
           </ul>
         </nav>
-
         <button className="w-6 h-6 m-2 flex-none md:hidden" onClick={ () => setMenuOpen(!menuOpen) }>
           <svg className=" fill-white" viewBox="0 0 48 48">
             <title>{ menuOpen ? 'Menu Close' : 'Menu Open'}</title>
