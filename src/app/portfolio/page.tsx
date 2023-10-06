@@ -2,13 +2,19 @@ import { ReactElement } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const portfolioItem = (params: { title: string, imageUrl?: string, skills: Array<string>, githubUrl?: string, thumbnail?: ReactElement }) => {
+const portfolioItem = (params: { title: string, skills: Array<string>, imageUrl?: string, githubUrl?: string, thumbnail?: ReactElement }) => {
   const { title, skills, imageUrl, githubUrl, thumbnail } = params;
+  const image = imageUrl
+    ? <Image src={imageUrl} alt="Portfolio Site" width={400} height={250}/>
+    : null;
+  if (!(image || thumbnail)) {
+    throw new Error('Missing image or thumbnail')
+  }
+
   return (
     <section>
       <h2 className="my-3 text-xl">{title}</h2>
-      {imageUrl ? <Image src={imageUrl} alt="Portfolio Site" width={400} height={250}/> : null}
-      {thumbnail}
+      {image || thumbnail}
       <ul className="my-4 list-disc list-inside">
         {skills.map((skill: string, index: number) => <li key={index}>{skill}</li>)}
       </ul>
