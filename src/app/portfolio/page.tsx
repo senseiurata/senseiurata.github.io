@@ -1,9 +1,10 @@
 import PortfolioItem from '@/shared/server/PortfolioItem';
 import InnerContentTemplate from '@/shared/server/InnerContentTemplate';
+import OuterContentTemplate from '@/shared/server/OuterContentTemplate';
 
 export default function Portfolio () {
   return (
-    <div className="mx-auto max-w-3xl mt-3 mb-10 p-8 text-center bg-white/10 sm:rounded-2xl md:flex md:gap-7 md:items-start md:text-start">
+    <OuterContentTemplate>
       <InnerContentTemplate
         title="Portfolio"
         nextActionText="Contact Me"
@@ -35,6 +36,6 @@ export default function Portfolio () {
           </div>
         </>
       </InnerContentTemplate>
-    </div>
+    </OuterContentTemplate>
   )
 };
