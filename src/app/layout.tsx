@@ -22,7 +22,7 @@ export default function RootLayout({
           <div className="flex-none">
             <Header />
           </div>
-          <main className="flex-auto flex items-center">
+          <main className="flex-auto flex items-center justify-center">
             {children}
           </main>
           <div className="flex-none">
