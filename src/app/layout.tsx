@@ -17,8 +17,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className}`}>
-        <div className="h-screen w-screen bg-sf bg-cover bg-center flex flex-col text-white">
+      <body className={`${inter.className} bg-gray-950 bg-sf bg-cover bg-center`}>
+        <div className="h-screen w-screen flex flex-col text-white">
           <div className="flex-none">
             <Header />
           </div>
