@@ -21,7 +21,7 @@ export default function Profile () {
           >
             <div className="flex-auto max-w-sm">
               <p className="my-4">
-                I’m Ken, a coder who’s worked with JavaScript, PHP, and React; I helped make vrv.co, taught React to folks, and even dabbled in English-Japanese software translations.
+                I’m Ken, a coder who’s worked with JavaScript, PHP, and React; I helped make vrv.co, taught React to folks, and even dabbled in English to Japanese translations.
               </p>
               <p className="my-4">
                 <a href="/resume.pdf">Ken’s Resume (PDF)</a>
