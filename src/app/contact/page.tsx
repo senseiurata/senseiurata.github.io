@@ -18,7 +18,6 @@ export default function Contact () {
             <p className="my-4">Ken Urata</p>
             <p className="my-4">San Francisco - California - (U.S.A)</p>
             <address>
-              <p><a href="tel:+14085152896"><strong>+1 408 515.2896</strong></a></p>
               <p><a href="mailto:kensurata@gmail.com" className="my-4">kensurata@gmail.com</a></p>
             </address>
           </>
